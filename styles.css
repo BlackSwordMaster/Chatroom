@@ -10,6 +10,7 @@ body {
   }
   
   .chat-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 600px;
@@ -22,7 +23,7 @@ body {
   }
   
   .chat-header {
-    background-color: #0077cc;
+    background-color: #22b81f;
     color: white;
     padding: 16px;
     text-align: center;
@@ -30,25 +31,29 @@ body {
     font-weight: bold;
   }
   
+  /* Messages stack from bottom up */
   .chat-messages {
     flex: 1;
-    padding: 16px;
+    display: flex;
+    flex-direction: column-reverse;
     overflow-y: auto;
+    padding: 16px;
     background-color: #fafafa;
   }
   
   .message-container {
     display: flex;
-    align-items: flex-end;
-    margin-bottom: 12px;
   }
   
   .message-container.user {
-    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .message-container.other {
+    justify-content: flex-start;
   }
   
   .message {
-    margin: 0 8px;
     padding: 8px 12px;
     border-radius: 8px;
     max-width: 70%;
@@ -59,12 +64,21 @@ body {
     background-color: #dbeafe;
   }
   
+  /* Avatar bar above input */
+  .chat-avatars {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 12px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
+    background-color: #f1f1f1;
+  }
+  
   .avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    transition: transform 0.3s ease;
   }
   
   .user-avatar.wiggle {
@@ -77,9 +91,9 @@ body {
     75% { transform: rotate(-3deg); }
   }
   
+  /* Input at the bottom */
   .chat-input {
     display: flex;
-    border-top: 1px solid #ddd;
     padding: 8px;
     background-color: #f9f9f9;
   }
@@ -94,7 +108,7 @@ body {
   .chat-input button {
     margin-left: 8px;
     padding: 10px 16px;
-    background-color: #0077cc;
+    background-color: #22b81f;
     color: white;
     border: none;
     border-radius: 6px;
