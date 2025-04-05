@@ -9,16 +9,20 @@
 <body>
   <div class="chat-container">
     <div class="chat-header">Chatroom</div>
+
+    <!-- Chat messages stack from bottom to top -->
     <div class="chat-messages" id="chatMessages">
       <div class="message-container other">
-        <img src="images/chair.webp" alt="User 1" class="avatar" />
         <div class="message">Hey, how are you?</div>
       </div>
-      <div class="message-container user">
-        <img src="images/bunny.jpg" alt="User 2" class="avatar user-avatar" />
-        <div class="message">I’m good! You?</div>
-      </div>
     </div>
+
+    <!-- Avatars sit above input -->
+    <div class="chat-avatars">
+      <img src="images/chair.webp" alt="User 1" class="avatar left-avatar" />
+      <img src="images/bunny.jpg" alt="You" class="avatar right-avatar user-avatar" />
+    </div>
+
     <div class="chat-input">
       <input id="chatInput" type="text" placeholder="Type a message..." oninput="handleTyping()" />
       <button onclick="sendMessage()">Send</button>
