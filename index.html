@@ -9,14 +9,21 @@
 <body>
   <div class="chat-container">
     <div class="chat-header">Chatroom</div>
-    <div class="chat-messages">
-      <div class="message other">Hey, how are you?</div>
-      <div class="message user">I’m good! You?</div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="message-container other">
+        <img src="images/chair.webp" alt="User 1" class="avatar" />
+        <div class="message">Hey, how are you?</div>
+      </div>
+      <div class="message-container user">
+        <img src="images/bunny.jpg" alt="User 2" class="avatar user-avatar" />
+        <div class="message">I’m good! You?</div>
+      </div>
     </div>
     <div class="chat-input">
-      <input type="text" placeholder="Type a message..." />
-      <button>Send</button>
+      <input id="chatInput" type="text" placeholder="Type a message..." oninput="handleTyping()" />
+      <button onclick="sendMessage()">Send</button>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
