@@ -1,4 +1,4 @@
-/* Fullscreen with comic background */
+/* Fullscreen layout with comic-style background */
 html, body {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@ html, body {
   background-size: cover;
 }
 
-/* Chat container wraps everything */
+/* Main chat container */
 .chat-container {
   position: relative;
   height: 100vh;
@@ -16,7 +16,7 @@ html, body {
   overflow: hidden;
 }
 
-/* Chat message history (scrollable) */
+/* Scrollable chat history panel */
 .chat-history {
   position: absolute;
   top: 60px;
@@ -51,7 +51,7 @@ html, body {
   align-self: flex-start;
 }
 
-/* Comic-style temporary bubbles */
+/* Comic-style bubbles that appear above avatars */
 .speech-bubbles {
   position: fixed;
   bottom: 250px;
@@ -73,7 +73,7 @@ html, body {
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-/* User (right side bubble) */
+/* Right-side (user) bubble */
 .user-bubble {
   right: 100px;
 }
@@ -90,7 +90,7 @@ html, body {
   border-bottom: 0;
 }
 
-/* Other user (left side bubble) */
+/* Left-side (other) bubble */
 .other-bubble {
   left: 100px;
 }
@@ -107,7 +107,7 @@ html, body {
   border-bottom: 0;
 }
 
-/* Avatars styled like characters */
+/* Character avatars at the bottom corners */
 .chat-avatars {
   position: fixed;
   bottom: 80px;
@@ -126,7 +126,7 @@ html, body {
   user-select: none;
 }
 
-/* Input box below characters */
+/* Input area fixed at bottom with responsive layout */
 .chat-input {
   position: fixed;
   bottom: 0;
@@ -134,9 +134,11 @@ html, body {
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
   display: flex;
+  gap: 8px;
   padding: 12px;
   border-top: 1px solid #ccc;
   z-index: 4;
+  box-sizing: border-box;
 }
 
 .chat-input input {
@@ -145,10 +147,11 @@ html, body {
   font-size: 16px;
   border: 1px solid #aaa;
   border-radius: 6px;
+  min-width: 0; /* prevent overflow on smaller screens */
 }
 
 .chat-input button {
-  margin-left: 8px;
+  flex-shrink: 0;
   padding: 12px 18px;
   background-color: #0077cc;
   color: white;
