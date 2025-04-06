@@ -30,3 +30,4 @@ document.getElementById('chatInput').addEventListener('keydown', function (e) {
     e.preventDefault();
     sendMessage();
   }
+});

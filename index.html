@@ -9,25 +9,27 @@
 <body>
   <div class="chat-container">
 
-    <!-- Scrollable chat history -->
+    <!-- Scrollable message history -->
     <div class="chat-history" id="chatHistory"></div>
 
-    <!-- Comic-style live bubbles above avatars -->
+    <!-- Comic-style speech bubbles (temporary display) -->
     <div class="speech-bubbles" id="speechBubbles"></div>
 
-    <!-- Avatars on the bottom corners -->
+    <!-- Avatar images at bottom corners -->
     <div class="chat-avatars">
       <img src="images/chair.webp" alt="User 1" class="avatar left-avatar" />
       <img src="images/bunny.jpg" alt="You" class="avatar right-avatar user-avatar" />
     </div>
 
-    <!-- Message input -->
+    <!-- Input box for sending messages -->
     <div class="chat-input">
       <input id="chatInput" type="text" placeholder="Type a message..." />
       <button onclick="sendMessage()">Send</button>
     </div>
 
   </div>
+
+  <!-- Script for typing and sending -->
   <script src="script.js"></script>
 </body>
 </html>
