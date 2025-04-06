@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chatroom Mockup</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Comic Chat</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="chat-container">
-    <div class="chat-header">Chatroom</div>
 
-    <!-- Chat messages stack from bottom to top -->
-    <div class="chat-messages" id="chatMessages">
-      <div class="message-container other">
-        <div class="message">Hey, how are you?</div>
-      </div>
-    </div>
+    <!-- Scrollable chat history -->
+    <div class="chat-history" id="chatHistory"></div>
 
-    <!-- Avatars sit above input -->
+    <!-- Comic-style live bubbles above avatars -->
+    <div class="speech-bubbles" id="speechBubbles"></div>
+
+    <!-- Avatars on the bottom corners -->
     <div class="chat-avatars">
       <img src="images/chair.webp" alt="User 1" class="avatar left-avatar" />
       <img src="images/bunny.jpg" alt="You" class="avatar right-avatar user-avatar" />
     </div>
 
+    <!-- Message input -->
     <div class="chat-input">
-      <input id="chatInput" type="text" placeholder="Type a message..." oninput="handleTyping()" />
+      <input id="chatInput" type="text" placeholder="Type a message..." />
       <button onclick="sendMessage()">Send</button>
     </div>
+
   </div>
   <script src="script.js"></script>
 </body>
